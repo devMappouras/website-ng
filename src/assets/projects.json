@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "preview": "assets/media/projects/portfolio.png",
+      "name": "This Portfolio Web Application",
+      "description": "I designed the code architecture for this portfolio website and built it from ground up using Angular Framework. \n\nURL is https://github.com/devMappouras/devmappouras",
+      "url": "https://github.com/devMappouras/devmappouras"
+    },
+    {
+      "preview": "assets/media/projects/eventsapp.png",
+      "name": "Events Customers Application for iOS/Android",
+      "description": "Your ultimate event companion powered by Flutter and GetX. Buy tickets, manage bookings, and elevate your event encounters with ease. Developed to achieve the Honours Degree at my university"
+    },
+    {
+      "preview": "assets/media/projects/eventsadmin.png",
+      "name": "Events Administration Website Application",
+      "description": "An Administration website that was developed using Angular and PrimeNG, to enable the organisers of the events to manage their events, tickets, sales, venues and more."
+    }
+  ]
+}

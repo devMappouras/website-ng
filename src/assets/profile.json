@@ -1,0 +1,31 @@
+{
+  "email": "devmappouras@gmail.com",
+  "location": "Larnaca, Cyprus",
+  "name": "Christos Mappouras",
+  "phone": "",
+  "avatar": "assets/media/images/cm.jpg",
+  "education": [
+    {
+      "title": "Bachelor of Science (BSc) in Computing",
+      "meta": "University of Central Lancashire,  Sep 2018 – July 2023"
+    }
+  ],
+  "about": "BSc (Hons) Computing student, specializing in software development. Well-versed in numerous programming languages. \n\nHighly motivated to take every new opportunity to help me expand my knowledge and practical skills in the field. I Enjoy working as a team member as well as independently.",
+  "socials": [
+    {
+      "name": "Github",
+      "link": "https://github.com/devMappouras",
+      "icon": "fab fa-github"
+    },
+    {
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/in/dev-mappouras/",
+      "icon": "fab fa-linkedin"
+    },
+    {
+      "name": "devmappouras@gmail.com",
+      "link": "mailto:devmappouras@gmail.com",
+      "icon": "fa fa-envelope"
+    }
+  ]
+}

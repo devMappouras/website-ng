@@ -1,0 +1,16 @@
+{
+  "work": [
+    {
+      "title": "Software Developer at D.G. Techlink",
+      "date": "June 2021 - Present",
+      "description": "Building Restful APIs using C#/.Net. Developing Professional looking Web Applications\n\nWe mainly develop using Agile over two-week sprints.",
+      "stack": [
+        "C# / .Net",
+        "Angular",
+        "Javascript",
+        "HTML / CSS",
+        "SQL"
+      ]
+    }
+  ]
+}

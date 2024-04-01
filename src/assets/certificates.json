@@ -1,0 +1,12 @@
+{
+  "certificates": [
+    {
+      "preview": "assets/media/certificates/az.png",
+      "name": "Microsoft Certified: Azure Fundamentals"
+    },
+    {
+      "preview": "assets/media/certificates/dp.png",
+      "name": "Microsoft Certified: Azure Data Fundamentals"
+    }
+  ]
+}

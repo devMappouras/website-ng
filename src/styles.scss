@@ -1,1 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #959595 !important;
+  }
+  
+  h5 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .cm-profile-info {
+    padding: 0px 2px 0px 35px;
+  }
+  
+  .cm-bg-color {
+    background-color: #0a326e;
+  }
+  
+  .cm-text-color {
+    color: #0a326e;
+  }
+  
+  .cm-profile-img {
+    width: 100px;
+    border-radius: 25%;
+    border: #000000 solid;
+  }
+  
+  .cm-preview-image {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .cm-preview-image-mobile {
+    width: 100%;
+    height: 180px;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .cm-card {
+    border: none !important;
+    border-radius: .3rem !important;;
+    box-shadow: rgba(0, 0, 0, 0.4) 10px 10px 10px;
+  }
+  
+  .cm-skill {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-family: proxima-nova, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 600;
+    background-color: #0a326e;
+    color: rgb(255, 255, 255) !important;
+    height: 35px;
+    border-radius: 3px;
+    padding: 0px 12px;
+    margin: 0px 6px 6px 0px;
+  }
+  
+  .fa,.fab {
+    color: #000000;
+  }
+  
+  @media(max-width: 768px) {
+    .cm-profile-img {
+      width: 36%;
+      margin-bottom: 10px;
+    }
+  
+  }
+  
+  html, body { height: 100%; }
+  body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  

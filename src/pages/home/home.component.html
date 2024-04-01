@@ -1,0 +1,181 @@
+  <div class="container mb-4">
+    <div class="row">
+      <!-- left column -->
+      <div class="col-lg-4">
+        <!-- personal info card -->
+        <div class="row mt-3">
+          <div class="col-lg-12">
+            <div class="card cm-card">
+              <div class="card-body">
+                <h2>Personal Information</h2>
+                <div class="row mt-4">
+                  <div class="col-lg-3">
+                    <img [src]="profile?.avatar" class="cm-profile-img" alt="christos profile picture">
+                  </div>
+                  <div class="col-lg-9 cm-profile-info">
+                    <h2>{{profile?.name}}</h2>
+                    <p class="m-0 mb-2">{{profile?.location}}</p>
+                    <ng-container *ngFor="let social of profile?.socials">
+                      <a [href]="social?.link"><span class="mr-2"><i [ngClass]="social?.icon" aria-hidden="true"></i></span>{{social?.name}}</a><br>
+                    </ng-container>
+                    <div class="m-0 mt-2">
+                      <a href="assets/cv/ChristosMappourasCV.docx" class="btn btn-default cm-bg-color text-white"
+                      target="_blank" download="ChristosMappourasCV.docx">
+                      <span class="mr-2"><i class="fas fa-cloud-download-alt"></i></span>Resume</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- summary card -->
+        <div class="row mt-3">
+          <div class="col-lg-12">
+            <div class="card cm-card">
+              <div class="card-body">
+                <h2>Summary</h2>
+                <hr class="m-0 mb-3">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <p style="white-space: pre-wrap;" class="card-text" [innerHTML]="profile?.about"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- right column -->
+      <div class="col-lg-8 pl-4">
+        <!-- skills card -->
+        <div class="row mt-3">
+          <div class="col-lg-12">
+            <div class="card cm-card">
+              <div class="card-body">
+                <h2> My Top Skills</h2>
+                <hr class="m-0 mb-3">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <a  class="mr-1 cm-skill" *ngFor="let skill of skills?.top_skills" >{{skill}}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- work card -->
+        <div class="row mt-3">
+          <div class="col-lg-12">
+            <div class="card cm-card">
+              <div class="card-body">
+                <h2> Work Experience</h2>
+                <hr class="m-0 mb-3">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="mb-2" *ngFor="let work of workExperience?.work">
+                      <h2>{{work?.title}}</h2>
+                      <p>{{work?.date}}</p>
+                      <p style="white-space: pre-wrap;" class="card-text" [innecmTML]="work?.description"></p>
+                      <a  class="mr-1 cm-skill" *ngFor="let skill of work?.stack" >{{skill}}</a>
+                      <hr class="m-0 mt-3">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- education card -->
+        <div class="row mt-3">
+          <div class="col-lg-12">
+            <div class="card cm-card">
+              <div class="card-body">
+                <h2>Education</h2>
+                <hr class="m-0 mb-3">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <ng-container *ngFor="let school of profile?.education">
+                      <h2>{{school?.title}}</h2>
+                      <p>{{school?.meta}}</p>
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificates -->
+        <div class="row mt-3">
+          <div class="col-lg-12">
+            <div class="card cm-card">
+              <div class="card-body">
+                <h2>Certificates</h2>
+                <hr class="m-0 mb-3">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="card mb-3" *ngFor="let certificate of certificates?.certificates">
+                      <div class="row no-gutters">
+                        <div class="col-md-4">
+                        <div
+                          [ngClass]="{'cm-preview-image': !showMobileImages, 'cm-preview-image-mobile': showMobileImages}"
+                          [ngStyle]="{'background-image': 'url(' + certificate?.preview + ')'}">
+                        </div>
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h2 class="card-title">{{certificate?.name}}</h2>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- projects -->
+        <div class="row mt-3">
+          <div class="col-lg-12">
+            <div class="card cm-card">
+              <div class="card-body">
+                <h2>Featured Projects</h2>
+                <hr class="m-0 mb-3">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="card mb-3" *ngFor="let project of featuredProjects?.projects">
+                      <div class="row no-gutters">
+                        <div class="col-md-4">
+                        <div
+                          [ngClass]="{'cm-preview-image': !showMobileImages, 'cm-preview-image-mobile': showMobileImages}"
+                          [ngStyle]="{'background-image': 'url(' + project?.preview + ')'}">
+                        </div>
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h2 class="card-title">{{project?.name}}</h2>
+                            <p style="white-space: pre-wrap;" class="card-text" [innerHTML]="project?.description | linkify"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<spinner></spinner>
