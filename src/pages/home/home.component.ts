@@ -1,24 +1,30 @@
 import { DataApiService } from '../../services/data-api.service';
 import { Component, OnInit, HostListener } from '@angular/core';
-import { LoaderService } from 'src/app/services/loader.service';
+import { LoaderService } from '../../services/loader.service';
+import { SpinnerComponent } from '../shared-components/spinner/spinner.component';
+import { LinkifyPipe } from '../../pipes/linkify.pipe';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'home',
+  selector: 'app-home',
+  standalone: true,
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  providers: [LoaderService],
+  imports: [SpinnerComponent, LinkifyPipe, CommonModule]
 })
 export class HomeComponent implements OnInit {
-  skills;
-  featuredProjects;
-  certificates;
-  workExperience;
-  profile;
+  skills: any;
+  featuredProjects: any;
+  certificates: any;
+  workExperience: any;
+  profile: any;
   showMobileImages = false;
 
   constructor(
     public dataApi: DataApiService,
     private loaderService: LoaderService
-  ) {  }
+  ) {}
 
   async ngOnInit(): Promise<void> {
     this.loaderService.setLoading(true);
@@ -35,12 +41,14 @@ export class HomeComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  onresize(event): void {
-    //console.log('WINDOW_RESIZE_EVENT', event);
+  onresize(event: any): void {
     this.checkWindowSize();
   }
 
   private checkWindowSize() {
-    window.innerWidth <= 768 ? this.showMobileImages = true : this.showMobileImages = false;
+    //https://stackoverflow.com/questions/77514292/angular-17-window-not-defined
+    if (typeof window !== "undefined") {
+      window.innerWidth <= 768 ? this.showMobileImages = true : this.showMobileImages = false;
+   }
   }
 }

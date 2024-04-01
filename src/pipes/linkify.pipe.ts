@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Pipe({
-  name: 'linkify'
+  name: 'linkify',
+  standalone: true
 })
 export class LinkifyPipe implements PipeTransform {
 
@@ -23,7 +24,7 @@ export class LinkifyPipe implements PipeTransform {
       links.forEach((link, indx) => {
         temp[indexOfOccurrence[indx]] = `<a href="${link}" target="_blank">${link}</a>`;
       });
-      return this._domSanitizer.bypassSecurityTrustHtml(temp.join(' '));
+      return this._domSanitizer?.bypassSecurityTrustHtml(temp.join(' '));
     }
   }
 

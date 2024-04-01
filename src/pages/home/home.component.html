@@ -79,7 +79,7 @@
                     <div class="mb-2" *ngFor="let work of workExperience?.work">
                       <h2>{{work?.title}}</h2>
                       <p>{{work?.date}}</p>
-                      <p style="white-space: pre-wrap;" class="card-text" [innecmTML]="work?.description"></p>
+                      <p style="white-space: pre-wrap;" class="card-text" [innerHTML]="work?.description"></p>
                       <a  class="mr-1 cm-skill" *ngFor="let skill of work?.stack" >{{skill}}</a>
                       <hr class="m-0 mt-3">
                     </div>

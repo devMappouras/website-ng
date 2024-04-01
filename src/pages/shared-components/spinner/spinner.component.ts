@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { LoaderService } from 'src/app/services/loader.service';
+import { LoaderService } from '../../../services/loader.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'spinner',
+  standalone: true,
   templateUrl: './spinner.component.html',
-  styleUrls: ['./spinner.component.scss']
+  styleUrls: ['./spinner.component.scss'],
+  providers: [LoaderService],
+  imports: [CommonModule]
 })
 export class SpinnerComponent implements OnInit {
 
